@@ -1,11 +1,6 @@
 import Ember from 'ember';
 import storage from 'ember-view-state/utils/local-storage';
 
-// TODO: check if we need moment
-let moment = function () {
-  return new Date();
-};
-
 /***
  * The ViewStateRepository manages the data access to persist
  * properties for the ViewState Mixin and Service
@@ -21,7 +16,7 @@ export default Ember.Service.extend({
   flush: function() {
     let data = {
       preferences: this.get('_preferences'),
-      lastUpdatedAt: moment()
+      lastUpdatedAt: new Date()
     };
     data = JSON.stringify(data);
     storage.setItem(this._getNamespace(), data);

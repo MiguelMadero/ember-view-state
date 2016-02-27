@@ -2,7 +2,8 @@
 [x] Port tests
 [x] Cleanup and upgrade to ES6
 [x] Abstract server persisance logic
-[ ] Check if we need moment
+[x] Check if we need moment
+  not needed.
 [ ] Add server side persistance firebase example
 [ ] Document
 [ ] Add sample to dummy app

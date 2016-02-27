@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 const {on, computed, inject } = Ember;
-// TODO: check if we need moment
-let moment = function () {
-  return new Date();
-};
 
 /***
  * Turns a mix of string and objects into objects with key/value so we can use consistently.
@@ -75,7 +71,7 @@ export default Ember.Mixin.create({
       Ember.set(preferences, propertyDefinition.persistedPropertyName,
         _this.get(propertyDefinition.mixeePropertyName));
     });
-    preferences.lastUpdatedAt = moment();
+    preferences.lastUpdatedAt = new Date();
     this.get('viewStateRepository').flush();
   })
 });

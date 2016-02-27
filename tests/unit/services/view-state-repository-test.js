@@ -7,8 +7,6 @@ var clearLocalStorage = function () {
 };
 
 moduleFor('service:view-state-repository', 'Unit | Service | view state repository', {
-  // Specify the other units that are required for this test.
-  // needs: ['service:foo']
   setup() {
     clearLocalStorage();
   },
