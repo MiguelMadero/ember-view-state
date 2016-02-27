@@ -1,6 +1,10 @@
 # Ember-view-state
 
-This README outlines the details of collaborating on this Ember addon.
+Ember View State persists the values of the specified properties in a component (or controller if that's still your thing) so the state can be maintained between transitions, sessions and devices. This is useful to provide a better user experience. Some useful cases are:
+
+* Remember the sort preferences
+* Remember the last selected tab
+* Remember if an accordion panel is open or closed.
 
 ## Installation
 
