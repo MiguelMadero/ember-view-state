@@ -120,7 +120,7 @@ export default ViewStateRepository.extend({
 The data retrieved and persisted has the following format
 
 ```
-let data = {
+{
   viewState: {
     'my-component': {
       myProperty: 'value'
