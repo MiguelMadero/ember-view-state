@@ -48,28 +48,25 @@ export default Ember.Mixin.create({
   }),
 
   loadViewState: on('init', function() {
-    var _this = this,
-      viewState = this.get('viewStateRepository').getViewStateFor(this.get('viewStateKey')),
-      propertyDefinitions = adjustPropertyDefinitions(this.get('viewStateProperties'));
+    const viewState = this.get('viewStateRepository').getViewStateFor(this.get('viewStateKey'));
+    const propertyDefinitions = adjustPropertyDefinitions(this.get('viewStateProperties'));
 
-    propertyDefinitions.forEach(function(propertyDefinition) {
+    propertyDefinitions.forEach(propertyDefinition=> {
       if (viewState.hasOwnProperty(propertyDefinition.persistedPropertyName)) {
         // If we have a persisted value, we set it in the mixee. Otherwise, leave the default
-        _this.set(propertyDefinition.mixeePropertyName,
+        this.set(propertyDefinition.mixeePropertyName,
           viewState[propertyDefinition.persistedPropertyName]);
       }
     });
   }),
 
   persistViewState: on('willDestroyElement', function() {
-    // TODO: consider checking isDirty instead of always flushing
-    var _this = this,
-      viewState = this.get('viewStateRepository').getViewStateFor(this.get('viewStateKey')),
-      propertyDefinitions = adjustPropertyDefinitions(this.get('viewStateProperties'));
+    const viewState = this.get('viewStateRepository').getViewStateFor(this.get('viewStateKey')),
+    const propertyDefinitions = adjustPropertyDefinitions(this.get('viewStateProperties'));
 
-    propertyDefinitions.forEach(function(propertyDefinition) {
+    propertyDefinitions.forEach(propertyDefinition=> {
       Ember.set(viewState, propertyDefinition.persistedPropertyName,
-        _this.get(propertyDefinition.mixeePropertyName));
+        this.get(propertyDefinition.mixeePropertyName));
     });
     viewState.lastUpdatedAt = new Date();
     this.get('viewStateRepository').flush();

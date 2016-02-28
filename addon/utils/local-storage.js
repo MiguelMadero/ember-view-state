@@ -1,15 +1,15 @@
-let storage = window.localStorage,
-  createInMemoryStorage = function() {
-    var _data = {};
-    return {
-      getItem: function(key) {
-        return _data[key];
-      },
-      setItem: function(key, value) {
-        _data[key] = value;
-      }
-    };
+let storage = window.localStorage;
+export let createInMemoryStorage = function() {
+  var _data = {};
+  return {
+    getItem: function (key) {
+      return _data[key];
+    },
+    setItem: function (key, value) {
+      _data[key] = value;
+    }
   };
+};
 
 try {
   if (storage) {
