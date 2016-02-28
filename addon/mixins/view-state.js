@@ -61,7 +61,7 @@ export default Ember.Mixin.create({
   }),
 
   persistViewState: on('willDestroyElement', function() {
-    const viewState = this.get('viewStateRepository').getViewStateFor(this.get('viewStateKey')),
+    const viewState = this.get('viewStateRepository').getViewStateFor(this.get('viewStateKey'));
     const propertyDefinitions = adjustPropertyDefinitions(this.get('viewStateProperties'));
 
     propertyDefinitions.forEach(propertyDefinition=> {
