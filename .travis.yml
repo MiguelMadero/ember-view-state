@@ -26,12 +26,13 @@ before_install:
   - "npm install -g npm@^2"
 
 install:
-  - npm install -g bower
+  - npm install -g bower codeclimate-test-reporter
   - npm install
   - bower install
 
 script:
   - ember try $EMBER_TRY_SCENARIO test -test-page tests/index.html?hidepassed\&coverage
+  - CODECLIMATE_REPO_TOKEN=72e46affb8df470fdfcba61cef8f46e76edb6c0b7e4351e73715182e807798af codeclimate-test-reporter < lcov.dat
 
 addons:
   code_climate:

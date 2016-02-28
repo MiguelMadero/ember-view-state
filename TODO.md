@@ -6,5 +6,5 @@
   not needed.
 [x] Document
 [x] Add server side persistance firebase example (not needed, the README is enough)
-[ ] Configure code coverage on CodeClimate (https://github.com/codeclimate/javascript-test-reporter). Maybe use ember-blanket or something else
+[x] Configure code coverage on CodeClimate (https://github.com/codeclimate/javascript-test-reporter). Maybe use ember-blanket or something else
 [ ] Add sample to dummy app
