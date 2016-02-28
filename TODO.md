@@ -4,7 +4,8 @@
 [x] Abstract server persisance logic
 [x] Check if we need moment
   not needed.
-[ ] Add server side persistance firebase example
-[ ] Document
+[x] Document
+
 [ ] Add sample to dummy app
+[ ] Add server side persistance firebase example
 [ ] Configure code coverage on CodeClimate (https://github.com/codeclimate/javascript-test-reporter). Maybe use ember-blanket or something else
