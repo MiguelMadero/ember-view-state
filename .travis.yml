@@ -32,3 +32,7 @@ install:
 
 script:
   - ember try $EMBER_TRY_SCENARIO test -test-page tests/index.html?hidepassed\&coverage
+
+addons:
+  code_climate:
+    repo_token: 72e46affb8df470fdfcba61cef8f46e76edb6c0b7e4351e73715182e807798af
