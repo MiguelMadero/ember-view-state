@@ -4,6 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/MiguelMadero/ember-view-state/badges/gpa.svg)](https://codeclimate.com/github/MiguelMadero/ember-view-state)
 [![Test Coverage](https://codeclimate.com/github/MiguelMadero/ember-view-state/badges/coverage.svg)](https://codeclimate.com/github/MiguelMadero/ember-view-state/coverage)
 [![Dependency Status](https://www.versioneye.com/user/projects/56d23356157a690037bbb71c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56d23356157a690037bbb71c)
+[![Dependency Status](https://www.versioneye.com/user/projects/56d233bf157a69003c4b6c7b/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56d233bf157a69003c4b6c7b)
 [![npm version](https://badge.fury.io/js/ember-view-state.svg)](https://badge.fury.io/js/ember-view-state)
 
 Ember View State persists the values of the specified properties in a component (or controller if that's still your thing) so the state can be maintained between transitions, sessions and devices. This is useful to provide a better user experience. Some useful cases are:
