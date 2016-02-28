@@ -8,7 +8,7 @@ import sinonTest from 'dummy/tests/ember-sinon-qunit/test';
 module('Unit | Mixin | view state');
 
 
-const persistedPreferences = {
+const persistedViewState = {
   sort: 'tradeName_desc',
   displayComments: false,
   persistedAsUndefined: undefined,
@@ -18,16 +18,16 @@ const Component = Ember.Component.extend(ViewStateMixin, {
   group: 'tradeName',
   showComments: true,
   persistedAsUndefined: 'different value that should be overriden',
-  viewPreferenceKey: 'preference-key',
-  viewPreferenceProperties: ['sort', 'group', 'persistedAsUndefined', {showComments: 'displayComments'}]
+  viewStateKey: 'view-state-key',
+  viewStateProperties: ['sort', 'group', 'persistedAsUndefined', {showComments: 'displayComments'}]
 });
 
 
-test('properties are overriden on init based on persistedPreferences', function (assert) {
+test('properties are overriden on init based on persistedViewState', function (assert) {
   const component = Component.create({
     viewStateRepository: {
-      getPreferencesFor() {
-        return persistedPreferences;
+      getViewStateFor() {
+        return persistedViewState;
       }
     }
   });
@@ -37,10 +37,10 @@ test('properties are overriden on init based on persistedPreferences', function 
   assert.equal(component.get('persistedAsUndefined'), undefined);
 });
 
-sinonTest('#persistUserPreferences updates and persists persistedProperties', function (assert) {
+sinonTest('#persistViewState updates and persists persistedProperties', function (assert) {
   const repository = {
-    getPreferencesFor() {
-      return persistedPreferences;
+    getViewStateFor() {
+      return persistedViewState;
     },
     flush() {}
   };
@@ -54,7 +54,7 @@ sinonTest('#persistUserPreferences updates and persists persistedProperties', fu
   component.set('showComments', undefined);
   component.set('persistedAsUndefined', 'newValue4');
 
-  component.persistUserPreferences();
+  component.persistViewState();
 
   assert.equal(component.get('sort'), 'newValue1');
   assert.equal(component.get('group'), 'newValue2');
