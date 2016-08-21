@@ -130,7 +130,6 @@ The data retrieved and persisted has the following format
   lastUpdatedAt: "2016-02-28T00:49:01.068Z"
 };
 ```
-
 ## Installation
 
 * `git clone` this repository
@@ -139,7 +138,7 @@ The data retrieved and persisted has the following format
 
 ## Running
 
-* `ember server`
+* `ember serve`
 * Visit your app at http://localhost:4200.
 
 ## Running Tests
@@ -152,4 +151,4 @@ The data retrieved and persisted has the following format
 
 * `ember build`
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).

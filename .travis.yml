@@ -21,17 +21,20 @@ matrix:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
+  - npm config set spin false
+  - npm install -g bower codeclimate-test-reporter
+  - bower --version
+  - npm install phantomjs-prebuilt
+  - phantomjs --version
 
 install:
-  - npm install -g bower codeclimate-test-reporter
   - npm install
   - bower install
 
 script:
-  - ember try $EMBER_TRY_SCENARIO test -test-page tests/index.html?hidepassed\&coverage
+  # Usually, it's ok to finish the test scenario without reverting
+  #  to the addon's original dependency state, skipping "cleanup".
+  - ember try $EMBER_TRY_SCENARIO test -test-page tests/index.html?hidepassed\&coverage --skip-cleanup
   - CODECLIMATE_REPO_TOKEN=72e46affb8df470fdfcba61cef8f46e76edb6c0b7e4351e73715182e807798af codeclimate-test-reporter < lcov.dat
 
 addons:
