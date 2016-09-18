@@ -1,6 +1,5 @@
-# Ember-view-state
+# Ember-view-state [![Build Status](https://travis-ci.org/MiguelMadero/ember-view-state.svg?branch=master)](https://travis-ci.org/MiguelMadero/ember-view-state) [![Download count all time](https://img.shields.io/npm/dt/ember-view-state.svg)](https://www.npmjs.com/package/ember-view-state) [![Ember Observer Score](http://emberobserver.com/badges/ember-view-state.svg)](http://emberobserver.com/addons/ember-view-state)
 
-[![Build Status](https://travis-ci.org/MiguelMadero/ember-view-state.svg?branch=master)](https://travis-ci.org/MiguelMadero/ember-view-state)
 [![Code Climate](https://codeclimate.com/github/MiguelMadero/ember-view-state/badges/gpa.svg)](https://codeclimate.com/github/MiguelMadero/ember-view-state)
 [![Test Coverage](https://codeclimate.com/github/MiguelMadero/ember-view-state/badges/coverage.svg)](https://codeclimate.com/github/MiguelMadero/ember-view-state/coverage)
 [![Dependency Status](https://www.versioneye.com/user/projects/56d23356157a690037bbb71c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56d23356157a690037bbb71c)
